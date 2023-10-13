@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Fractals </title>
+<script src = 'Fractals_big.js'>
+ </script>
+</head>
+<body>
+<p align = 'left'><canvas id = 'cnv' width = 1000 height = 1000 style='border: 1px solid black;'></canvas></p>
+<span id=some_span></span>
+<br><b>Рассматриваемая область: x_min = <input type = 'text' id = 'x_minim' style = "width:70px;height:10px" value ='0'>, x_max = <input type = 'text' style = "width:70px;height:10px" id = 'x_maxim' value ='1'>, y_min = <input type = 'text' style = "width:70px;height:10px" id = 'y_minim' value = '0'>
+<br><b>Задайте начальную точку численно: x_0 = <input type = 'text' id = 'x_o' style = "width:70px;height:10px" value = '0'>, y_0 = <input type = 'text' id = 'y_o' style = "width:70px;height:10px" value = '0'>&hairsp;&hairsp;<input type = 'button' id = 'adot' value = 'Добавить нач. точку'>
+<form enctype="multipart/form-data" method="post">
+<input type="file" id="file" accept = ".txt"><b>Или выберите файл с несколькими начальными данными.
+</form>
+<br><b>(*) Задайте коэффициенты:</b>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&hairsp;<label><input type='text' style = "width:50px;height:15px"  id='a11' value='1' ><b>A_11</b></label> 
+&hairsp;<label><input type='text' style = "width:50px;height:15px" id='a12' value='1' ><b>A_12</b></label>
+<br><b>(*) Включить очистку холста после клика? </b>
+<label><input type = 'radio' name = 'clear_rect' value = 'yes'><b>Да</b></label>
+<label><input type = 'radio' name = 'clear_rect' value = 'no' checked><b>Нет</b></label>
+&hairsp;<label><input type='text' style = "width:50px;height:15px"  id='a21' value='1' ><b>A_21</b></label>
+<label><input type='text' style = "width:50px;height:15px"  id='a22' value='1' ><b>A_22</b></label>
+</br>
+&emsp;&emsp;&hairsp;&hairsp;<label><b>Режим <I>ZOOM'а</I><input type = 'checkbox' id = 'zoom_check'></b></label>
+&emsp;&emsp;&hairsp;&hairsp;<label><input type='text' id='number_it' value ='200000'><b>&hairsp;&hairsp;&hairsp;Количество итераций</b></label>
+<br><b> Выберите номер эксперимента:</b>
+<input type='number' size='1' id = 'num' min='1' max='7' value='0' step='1'>
+<br><b> <input type='button' id='downloadimg'  value='Сохранить рисунок'>
+<input type = 'button' style="width:200px;height:40px" id = 'refresh' value = 'Обновить рисунок'>&hairsp;&hairsp;&hairsp;<input type='button' id='clearr'  value='Очистить холст'></b></br>
+</body>
+</html>

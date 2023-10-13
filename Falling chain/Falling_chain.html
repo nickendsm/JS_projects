@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Chain_2022 </title>
+		<script src = 'Falling_chain.js'>
+		</script>
+	</head>
+	<body>
+		холсты для рисования: cnv - сама цепочка, cnv_graf, cnv_graf2 - рисование графиков
+		<div id = 'Canv'>
+		<canvas id = 'cnv' width = 500 height = 500 style='border: 1px solid black;'></canvas>
+		<canvas id = 'cnv_graf' width = 500 height = 250 style='border: 1px solid black;'></canvas>
+		<canvas id = 'cnv_graf2' width = 500 height = 250 style='border: 1px solid black;'></canvas>
+		<b>
+		<!-- константы -->
+		<!-- Жесткость/массу -->
+		<br><label>C/M <input type = 'text' id = 'CM' value = '2000'></label>
+		<!-- шаг по времени -->
+		<label>DT <input type = 'text' id = 'DT' value = '0.01'></label>
+		<!-- fps - частота кадров в секунду -->
+		<label>FPS <input type = 'range' id = 'FPS' min = 10 step = 10 value = 120 max = 120></label>
+		<!-- обновить расчет -->
+		 <input type = "button" id = "New" value = "Обновить"/>
+		 <!-- поставить на паузу; внести правки -->
+		 <input type="button" id = "Pause" value = "▶/||"/> <input type="button" id = "Add" value = "Внести правки"/>
+		 <!-- задать расстояние между частицами -->
+		 <label> Расстояние между частицами <input type = 'text' id = 'DIST' value = '1'>
+		<br>
+		<!-- коэффициент вязкости -->
+		<br><label>B <input type = 'text' id = 'B' value = '1'></label>
+		<!-- количество частиц -->
+		<label>N <input type = 'text' id = 'Num' value = '100'></label>
+		<!-- ускорение свободного падения -->
+		<label>G <input type = 'text' id = 'G' value = '50'></label>
+		<!-- как часто рисовать -->
+		<label>Рисовать каждый <input type = 'text' id = 'HOP' value = 1> шаг</label> 
+		
+		<input type = 'button' id = 'LET' value = 'Отпустить правый конец'>
+		<!-- изменить масштаб -->
+		<label>Масштаб<input type = 'range' id = 'COEFF' min = 0.1 step = 0.01 value = 3 max = 20></label>
+		<br> 
+		</b>
+		</div>
+		
+		<style type="text/css">
+			#CM,#DT,#B,#G,#Num,#HOP {width:70px}
+			#cnv_graf2 {position:absolute; left:514px;}
+			#cnv_graf {position:absolute; left:514px; top:258px;}
+		</style>
+		
+	</body>
+</html>

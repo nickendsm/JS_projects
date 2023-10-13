@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Модель газа</title>
+		<script src='gas.js'></script>
+		<meta charset ='utf-8'>
+	</head>
+	<body>
+		<canvas id="canvas_ex" width = 1000 height = 1000
+			style ="border: 1px solid black;">
+		</canvas>
+		<canvas id="canvas_g" width = 1000 height = 300
+			style ="border: 1px solid black;">
+		</canvas>
+		<canvas id = "canvas_t" width = 1000 height = 300
+			style = "border: 1px solid black;">
+		</canvas>
+		<!-- Введем ползунок для изменения максимального количества частиц в одном столбике -->
+		<input type = 'range' min = 2 max = 100 value = 100 id = 'NumP'><label>Количество разбиений по оси X: <span id = 'nums'> </span>
+		
+	</body>
+</html>
